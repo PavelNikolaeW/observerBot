@@ -1,0 +1,14 @@
+version: '2.2'
+
+services:
+  bot:
+    env_file: .env
+    build:
+        context: .
+    networks:
+      - default
+      - nginx_problem-solving-framework
+
+networks:
+  nginx_problem-solving-framework:
+    external: true
